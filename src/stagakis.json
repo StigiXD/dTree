@@ -35,7 +35,7 @@
                       "class":"man",
                       "extra":{
                         "nickname":"ΒΒ",
-                        "tree":"./valtatzi.json"
+                        "tree":"valtatzi.json"
                       }
                       },
                       "children":[
@@ -86,7 +86,7 @@
                         "extra":
                         {
                           "nickname":"Diana Fei",
-                          "tree":"./bakardjieva.json"
+                          "tree":"bakardjieva.json"
                         }
                       },
                       "children":

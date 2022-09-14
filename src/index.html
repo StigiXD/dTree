@@ -61,8 +61,11 @@
 		width: 1200,
 		callbacks: {
 			nodeClick: function(name, extra) {
-				if (extra.tree != null){
-					
+				if (extra.tree == "bakardjieva.json"){
+					window.location.replace("./bakardjieva.html");
+				}
+				else if(extra.tree == "valtatzi.json"){
+					window.location.replace("./valtatzi.html");
 				}
 			},
 			nodeRightClick: function(name, extra) {
