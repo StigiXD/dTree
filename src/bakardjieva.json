@@ -1,0 +1,29 @@
+[{
+    "name": "? Bakardjiev",
+    "class": "man",
+    "marriages": [{
+      "spouse": {
+        "name": "Elena",
+        "class": "woman",
+        "extra": {
+          "nickname": "Eli"
+        }
+      },
+      "children": [{
+        "name": "Diana Bakardjieva",
+        "class": "woman",
+        "textClass": "emphasis",
+        "marriages": [{
+          "spouse": {
+            "name": "Δημήτρης Σταγάκης",
+            "class": "man"
+          },
+          "children": [{
+            "name": "Νικόλα Σταγάκης",
+            "class": "man"
+          }]
+        }]
+      }]
+    }]
+  }]
+  

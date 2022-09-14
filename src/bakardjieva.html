@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+
+<style type="text/css">
+	body {
+	    font: 10px sans-serif;
+	}
+	.linage {
+	    fill: none;
+	    stroke: #000;
+	}
+	.marriage {
+	    fill: none;
+	    stroke: black;
+	}
+	.marriageNode {
+			background-color: black;
+			border-radius: 50%;
+	}
+	.man {
+	    background-color: lightblue;
+			border-style: solid;
+			border-width: 1px;
+			box-sizing: border-box;
+	}
+	.woman {
+			background-color: pink;
+			border-style: solid;
+			border-width: 1px;
+			box-sizing: border-box;
+	}
+	.emphasis{
+			font-style: italic;
+	}
+	p {
+		padding:0;
+		margin:0;
+	}
+	svg {
+		border-style: solid;
+		border-width: 1px;
+	}
+</style>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-dtree@2.4.1/dist/dTree.min.js"></script>
+<body>
+		<h1>Bakardjieva Family Tree Demo</h1>
+    	<div id="graph"></div>
+
+		<script>
+      	treeJson = d3.json("bakardjieva.json", function(error, treeData) {dTree.init(treeData,{
+		target: "#graph",
+		debug: true,
+		hideMarriageNodes: true,
+		marriageNodeSize: 5,
+		height: 800,
+		width: 1200,
+		callbacks: {
+			nodeClick: function(name, extra) {
+				if (extra && extra.tree)
+					window.location.replace("http://1270.0.0.1:3000/diana.html")
+			},
+			nodeRightClick: function(name, extra) {
+				alert('Right-click: ' + name);
+			},
+			textRenderer: function(name, extra, textClass) {
+				if (extra && extra.nickname)
+					name = name + " (" + extra.nickname + ")";
+				return "<p align='center' class='" + textClass + "'>" + name + "</p>";
+			}	
+    	}
+		});});
+   		</script>
+</body>
+</html>

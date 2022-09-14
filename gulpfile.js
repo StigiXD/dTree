@@ -20,6 +20,7 @@ const conventionalGithubReleaser = require('conventional-github-releaser');
 
 // Gather the library data from `package.json`
 const manifest = require('./package.json');
+const prod = manifest.prod;
 const config = manifest.babelBoilerplateOptions;
 const mainFile = manifest.main;
 const demoFolder = manifest.demo;
@@ -219,7 +220,9 @@ gulp.task('release', function (callback) {
 
 gulp.task('demo', ['build'], $.shell.task([
   'node test/demo/demo.js'
-]))
+]));
 
 // An alias of build
 gulp.task('default', ['build']);
+
+gulp.task('prod', ['build'], $.shell.task(['node src/demo.js']));

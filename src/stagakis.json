@@ -1,0 +1,162 @@
+[
+  {"name": "Ανδρέας Σταγάκης",
+    "class": "man",
+    "textClass": "emphasis",
+    "marriages": 
+    [
+      {"spouse": 
+        {"name": "Αγγελική Χωραφάκη",
+        "class": "woman",
+        "extra": 
+        {"nickname": "Angel"}
+      },
+      "children":
+      [
+        {
+          "name": "Νίκος Σταγάκης",
+          "class": "man",
+          "marriages":
+          [
+            {"spouse":
+              {"name": "Evaggelia",
+              "class": "woman",
+              "extra": 
+              {"nickname": "Litza"}},
+              "children":
+              [
+                {
+                  "name": "Στέλλα Σταγάκη",
+                  "class":"woman",
+                  "marriages":
+                  [
+                    {
+                      "spouse":{
+                      "name":"Βασίλης Βαλτατζής",
+                      "class":"man",
+                      "extra":{
+                        "nickname":"ΒΒ",
+                        "tree":"./valtatzi.json"
+                      }
+                      },
+                      "children":[
+                        {
+                          "name":"Νίκος Βαλτατζής",
+                          "class":"man"
+                        },
+                        {
+                          "name":"Βαγγέλης Βαλτατζής",
+                          "class":"man"
+                        },
+                        {
+                          "name":"Άρτεμις Βαλτατζής",
+                          "class":"woman"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Δημήτρης Σταγάκης",
+                  "class":"man",
+                  "marriages":
+                  [
+                    {
+                      "spouse":{
+                      "name":"Elleni",
+                      "class":"woman"
+                      }
+                    },
+                    {
+                      "spouse":{
+                        "name":"Όλγα Βάρκαρη",
+                        "class":"woman"
+                      },
+                      "children":
+                      [
+                        {
+                        "name":"Γιώργος Σταγάκης",
+                        "class":"man"
+                        }
+                      ]
+                    },
+                    {
+                      "spouse":{
+                        "name":"Diana Bakardjieva",
+                        "class":"woman",
+                        "extra":
+                        {
+                          "nickname":"Diana Fei",
+                          "tree":"./bakardjieva.json"
+                        }
+                      },
+                      "children":
+                      [
+                        {
+                        "name":"Νικόλα Σταγάκης",
+                        "class":"man"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Αντρέας Σταγάκης",
+                  "class":"man",
+                  "marriages":
+                  [
+                    {
+                      "spouse":{
+                      "name":"Despina",
+                      "class":"woman"
+                      },
+                      "children":[
+                        {
+                          "name":"Ελευθερία Σταγάκης",
+                          "class":"woman"
+                        },
+                        {
+                          "name":"Olga Σταγάκης",
+                          "class":"woman"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Μανώλης Σταγάκης",
+          "class": "man"
+        },
+        {
+          "name": "Μιχάλης Σταγάκης",
+          "class": "man"
+        }, 
+        {
+          "name": "Λευτέρης Σταγάκης",
+          "class": "man"
+        }, 
+        {
+          "name": "Ελευθερία Σταγάκης",
+          "class": "woman"
+        }, 
+        {
+          "name": "Αρετή Σταγάκης",
+          "class": "woman"
+        },
+        {
+          "name": "Στέλλα Σταγάκης",
+          "class": "woman"
+        },
+        {
+          "name": "Αντωνία Σταγάκης",
+          "class": "woman"
+        }
+      ]
+      }
+    ]
+  }
+]
+  
