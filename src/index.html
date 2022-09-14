@@ -50,9 +50,10 @@
     	<div id="graph"></div>
 
 		<script>
-		
+
+		let inputjsonfile = "stagakis.json";
 			
-      	treeJson = d3.json("stagakis.json", function(error, treeData) {dTree.init(treeData,{
+      	d3.json(inputjsonfile, function(error, treeData) {dTree.init(treeData,{
 		target: "#graph",
 		debug: true,
 		hideMarriageNodes: true,
@@ -61,12 +62,23 @@
 		width: 1200,
 		callbacks: {
 			nodeClick: function(name, extra) {
-				if (extra.tree == "bakardjieva.json"){
-					window.location.replace("./bakardjieva.html");
+				d3.select("#graph").selectAll("*").remove();
+				console.log('removed');
+				d3.json(extra.tree, function(error, treeData) {dTree.init(treeData,{
+				target: "#graph",
+				debug: true,
+				hideMarriageNodes: true,
+				marriageNodeSize: 5,
+				height: 800,	
+				width: 1200,
+				callbacks:{
+				textRenderer:function(name, extra, textClass){
+					if(extra && extra.nickname)
+						name = name + " ("  + extra.nickname + ")";
+					return "<p align='center' class='" + textClass + "'>" + name + "</p>";
 				}
-				else if(extra.tree == "valtatzi.json"){
-					window.location.replace("./valtatzi.html");
-				}
+			}});
+			});
 			},
 			nodeRightClick: function(name, extra) {
 				alert('Right-click: ' + name);
@@ -77,7 +89,29 @@
 				return "<p align='center' class='" + textClass + "'>" + name + "</p>";
 			}	
     }
-});});
+	});});
+	function updateData(json){
+		d3.selectAll("#graph").remove();
+  		inputjsonfile=json;
+		d3.json(inputjsonfile, function(error, treeData) {dTree.init(treeData,{
+		target: "#graph",
+		debug: true,
+		hideMarriageNodes: true,
+		marriageNodeSize: 5,
+		height: 800,	
+		width: 1200,
+		callbacks:{
+			textRenderer:function(name, extra, textClass){
+				if(extra && extra.nickname)
+					name = name + " ("  + extra.nickname + ")";
+				return "<p align='center' class='" + textClass + "'>" + name + "</p>";
+			}
+		}});
+		});
+
+	}
+
+
     </script>
 </body>
 </html>
